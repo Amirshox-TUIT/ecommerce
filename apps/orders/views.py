@@ -88,7 +88,7 @@ class OrderCreateAPIView(GenericAPIView, CreateModelMixin):
         if not all(item.quantity for item in cart.items.all()):
             return Response({'detail': 'No items available'}, status=status.HTTP_404_NOT_FOUND)
 
-        return None
+
 
 
 
